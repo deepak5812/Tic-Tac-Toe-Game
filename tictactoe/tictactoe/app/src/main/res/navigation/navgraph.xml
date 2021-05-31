@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/ticTacToestart">
+
+    <fragment
+        android:id="@+id/ticTacToestart"
+        android:name="com.example.tictactoe.TicTacToestart"
+        android:label="fragment_tic_tac_toestart"
+        tools:layout="@layout/fragment_tic_tac_toestart" >
+        <action
+            android:id="@+id/action_ticTacToestart_to_ticTacToeplay"
+            app:destination="@id/ticTacToeplay" />
+        <action
+            android:id="@+id/action_ticTacToestart_to_ticTacToeabout"
+            app:destination="@id/ticTacToeabout" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticTacToeabout"
+        android:name="com.example.tictactoe.TicTacToeabout"
+        android:label="fragment_tic_tac_toeabout"
+        tools:layout="@layout/fragment_tic_tac_toeabout" />
+    <fragment
+        android:id="@+id/ticTacToeplay"
+        android:name="com.example.tictactoe.TicTacToeplay"
+        android:label="fragment_tic_tac_toeplay"
+        tools:layout="@layout/fragment_tic_tac_toeplay" />
+</navigation>
